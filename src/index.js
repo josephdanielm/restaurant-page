@@ -1,1 +1,3 @@
-alert('Webpack is working');
+import { loadHomePage } from "./page-load";
+
+loadHomePage();
