@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Grand+Hotel&family=Josefin+Sans:wght@300;400&family=Montserrat:wght@400;500&display=swap');
+
+/* Define custom color variables */
+:root {
+    /* Primary */
+    --rich-black: #001220ff;
+    --accent: #8EF6FF;
+    --light-blue: #A9CFD5ff;
+    --cerulean: #027597ff;
+
+    /* Neutral */
+    --stone: rgb(112, 125, 125);
+    --pistachio: rgb(170, 203, 196);
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and text color using custom variables */
+body {
+    background-color: var(--rich-black);
+    color: #8EF6FF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+#tabs {
+    display: flex;
+    max-width: 100rem;
+    height: 6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+}
+
+#tabs>button {
+    flex-grow: 1;
+    /* Allow buttons to grow and occupy equal space */
+    height: 2rem;
+    background: none;
+    color: #8EF6FF;
+    font-size: 2em;
+    border: none;
+    margin-right: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.home {
+    margin-right: 0;
+    flex-grow: 0;
+    /* Home button doesn't grow, keeping its size */
+}
+
+#content {
+    width: 90vw;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#content img {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 60rem;
+    box-shadow: var(--cerulean) 0px 0px 40px 0px;
+}
+
+#content h1 {
+    width: 30rem;
+    font-size: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#content p {
+    width: 50rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+}
+
+/* 
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Grand Hotel', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
