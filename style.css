@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Grand+Hotel&family=Josefin+Sans:wght@300;400&family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Cormorant+Garamond&family=Grand+Hotel&family=Josefin+Sans:wght@300;400&family=Montserrat:wght@400;500&display=swap');
 
 /* Define custom color variables */
 :root {
@@ -30,6 +30,7 @@ body {
     color: #8EF6FF;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    /**/
 }
 
 #tabs {
@@ -40,7 +41,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 1.2rem;
 }
 
 #tabs>button {
@@ -53,11 +53,12 @@ body {
     border: none;
     margin-right: 20px;
     font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    /**/
 }
 
 .home {
-    margin-right: 0;
-    flex-grow: 0;
+    margin-right: auto;
     /* Home button doesn't grow, keeping its size */
 }
 
@@ -67,6 +68,7 @@ body {
     margin: 0 auto;
     flex-direction: column;
     gap: 2rem;
+    margin-top: 10px;
 }
 
 #content img {
@@ -77,18 +79,83 @@ body {
 }
 
 #content h1 {
-    width: 30rem;
+    width: 100%;
+    /* Full width for heading */
+    text-align: left;
+    /* Center the heading */
     font-size: 2.4rem;
     font-family: 'Montserrat', sans-serif;
 }
 
 #content p {
-    width: 50rem;
+    width: 100%;
+    /* Full width for paragraphs */
+    text-align: left;
+    /* Center the paragraphs */
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
 }
 
-/* 
+@media screen and (max-width: 768px) {
+    #tabs {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    #tabs>button {
+        width: 100%;
+        /* Full width for buttons in mobile view */
+        margin: 5px 0;
+        /* Adjust spacing between buttons in mobile view */
+    }
+
+    .home {
+        margin-right: 0;
+    }
+
+    #content {
+        margin-top: 20px;
+        /* Increase top margin for content in mobile view */
+    }
+
+    #content img {
+        max-width: 100%;
+        /* Ensure image takes full width in mobile view */
+    }
+
+    #content h1,
+    #content p {
+        align-self: center;
+        text-align: center;
+        width: 20rem;
+        /* Center text in mobile view */
+    }
+
+    body {
+        font-size: 3vw;
+        /* Adjust base font size for body in mobile view */
+    }
+
+    #tabs>button {
+        font-size: 3vw;
+        /* Adjust font size for buttons in mobile view */
+    }
+
+    #content h1 {
+        font-size: 3.5vw;
+        /* Adjust font size for h1 in mobile view */
+    }
+
+    #content p {
+        font-size: 2vw;
+        /* Adjust font size for paragraphs in mobile view */
+    }
+}
+
+
+/*
+font-family: 'Clicker Script', cursive;
 font-family: 'Cormorant Garamond', serif;
 font-family: 'Grand Hotel', cursive;
 font-family: 'Josefin Sans', sans-serif;
